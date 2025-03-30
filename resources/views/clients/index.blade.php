@@ -23,6 +23,8 @@
                     <td>{{$client->contact}}</td>
                     <td>{{$client->created_at}}</td>
                     <td>{{$client->updated_at}}</td>
+                    <td><x-link-button href="clients/edit/{{$client->id}}" type="primary" text="редактировать"/></td>
+                    <td><x-delete-button href="clients/{{$client->id}}" type="primary" text="удалить"/></td>
                 </tr>
             @endforeach
         </tbody>

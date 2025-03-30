@@ -12,21 +12,39 @@ class ClientController extends Controller
         return view('clients.index', ['clients' => Client::paginate(10)]);
     }
 
-    public function create ()
+    public function create()
     {
         return view('clients.create');
     }
 
-    public function store (Request $request)
+    public function store(Request $request)
     {
         $validated = $request->validate([
             'username' => 'string',
             'contact' => 'string'
         ]);
-        if($validated){
-            Client::create($validated);
-            return redirect()->route('clients.index')->with('success', 'Клиент успешно создан');
-        }
-        return redirect()->route('clients.create')->with('error', 'Ошибка при создании клиента');;
+        Client::create($validated);
+        return redirect()->route('clients.index');
+    }
+
+    public function edit(Client $clients)
+    {
+        return view('clients.edit', ['clients' => $clients]);
+    }
+
+    public function update(Request $request, Client $clients)
+    {
+        $validated = $request->validate([
+            'username' => 'string',
+            'contact' => 'string'
+        ]);
+
+        $clients->update($validated);
+        return redirect()->route('clients.index');
+    }
+    public function destroy(Client $clients)
+    {
+        $clients->delete();
+        return redirect()->route('clients.index');
     }
 }
