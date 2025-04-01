@@ -4,6 +4,7 @@
 @import "_sidebar";
 @import "_nav-item";
 @import "_table";
+@import "_button";
 
 *{
     font-size: 24px;
@@ -18,8 +19,11 @@ a{
 
 .app{
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 200px 4fr;
 }
 .container{
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }

@@ -1,5 +1,7 @@
-<a href={{$href}}>
-    <button class={{$type}}>
-        {{$text}}
-    </button>
-</a>
+<div>
+    <a href={{$href}}>
+        <button class={{$type}}>
+            {{$text}}
+        </button>
+    </a>
+</div>
