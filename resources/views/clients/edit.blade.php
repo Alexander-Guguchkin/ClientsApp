@@ -3,7 +3,9 @@
 @section('title', 'Редактирование клиента')
 
 @section('content')
-<x-link-button href="/clients" text="Назад" type="btn-primary"/>
+<x-link-button href="/clients" type="btn-primary">
+    Назад
+</x-link-button>
 <form action="{{ route('clients.update', $clients->id) }}" method="post">
     @method('PATCH')
     @csrf

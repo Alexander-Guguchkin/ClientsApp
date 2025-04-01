@@ -47,4 +47,8 @@ class ClientController extends Controller
         $clients->delete();
         return redirect()->route('clients.index');
     }
+
+    public function show(Client $client){
+        return view('clients.show', ['client' => $client]);
+    }
 }

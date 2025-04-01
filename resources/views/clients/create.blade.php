@@ -3,7 +3,9 @@
 @section('title', 'Создание клиенты')
 
 @section('content')
-<x-link-button href="/clients" text="Назад" type="btn-primary"/>
+<x-link-button href="/clients" type="btn-primary">
+    Назад
+</x-link-button>
 <form action="{{ route('clients.store') }}" method="post">
     @csrf
     <div>

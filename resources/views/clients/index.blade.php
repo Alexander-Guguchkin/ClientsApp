@@ -4,7 +4,7 @@
 
 @section('content')
     <h1>Клиенты</h1>
-    <x-link-button href="clients/create" type="btn-primary" text="Создать"/>
+    <x-link-button href="/clients/create" type="btn-primary">Создать клиента</x-link-button>
     <table>
         <thead>
             <tr>
@@ -17,15 +17,22 @@
         </thead>
         <tbody>
             @foreach ($clients as $client)
-                <tr>
-                    <th scope="row">{{$client->id}}</th>
-                    <td>{{$client->username}}</td>
-                    <td>{{$client->contact}}</td>
-                    <td>{{$client->created_at}}</td>
-                    <td>{{$client->updated_at}}</td>
-                    <td><x-link-button href="clients/edit/{{$client->id}}" type="btn-primary" text="редактировать"/></td>
-                    <td><x-delete-button href="clients/{{$client->id}}" type="btn-primary" text="удалить"/></td>
-                </tr>
+                <div>
+                    <tr>
+                        <th scope="row">
+                            <a href="/clients/show/{{ $client->id }}">
+                                {{ $client->id }}
+                            </a>
+                        </th>
+                        <td>
+                            {{ $client->username }}
+                        </td>
+                        <td>{{ $client->contact }}</td>
+                        <td>{{ $client->created_at }}</td>
+                        <td>{{ $client->updated_at }}</td>
+
+                    </tr>
+                </div>
             @endforeach
         </tbody>
     </table>

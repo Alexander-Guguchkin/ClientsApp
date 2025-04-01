@@ -1,7 +1,7 @@
 <div>
     <a href={{$href}}>
         <button class={{$type}}>
-            {{$text}}
+            {{$slot}}
         </button>
     </a>
 </div>
