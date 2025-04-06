@@ -1,11 +1,10 @@
 <?php
 
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('dashboard.index');
-})->name('dashboard.index');
+Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
 Route::get('/clients', [ClientController::class, 'index'])->name('clients.index');
 Route::get('/clients/show/{client}', [ClientController::class, 'show'])->name('clients.show');
 Route::get('/clients/create', [ClientController::class, 'create'])->name('clients.create');
