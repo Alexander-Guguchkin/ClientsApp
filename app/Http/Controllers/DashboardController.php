@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Dashboard;
 use Illuminate\Http\Request;
-use App\Models\Client;
 
 class DashboardController extends Controller
 {
     public function index(){
-        $users = Client::all();
-        return view('dashboard.index', ['users'=>count($users)]);
+        $data = Dashboard::with('client')->get();
+        return view('dashboard.index', ['data'=>$data]);
     }
 }
