@@ -3,11 +3,6 @@
         <div class="card__row">
             <div class="card__column">
                 <span>
-                    ID: {{ $id }}
-                </span>
-            </div>
-            <div class="card__column">
-                <span>
                     Имя клиента: {{ $username }}
                 </span>
             </div>
