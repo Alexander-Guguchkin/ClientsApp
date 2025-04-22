@@ -9,19 +9,19 @@
     </x-link-button>
     <div class="client">
         <div class="info">
-            <div>ID</div>
+            <div>ID:</div>
             <div>{{ $client->id }}</div>
         </div>
         <div class="info">
-            <div>Имя</div>
+            <div>Имя:</div>
             <div>{{ $client->username }}</div>
         </div>
         <div class="info">
-            <div>Контакт</div>
+            <div>Контакт:</div>
             <div>{{ $client->contact }}</div>
         </div>
         <div class="info">
-            <div>Время создания</div>
+            <div>Время создания:</div>
             <div>{{ $client->created_at }}</div>
         </div>
         <div class="info">
