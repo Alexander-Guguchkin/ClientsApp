@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Status;
 
 class Client extends Model
 {
@@ -10,4 +11,8 @@ class Client extends Model
         'username',
         'contact'
     ];
+
+    public function status()  {
+        return $this->belongsTo(Status::class);
+    }
 }

@@ -11,6 +11,11 @@
                     Контакты: {{ $contact }}
                 </span>
             </div>
+            <div class="card__column">
+                <span>
+                    Статус: {{ $status->status_name }}
+                </span>
+            </div>
         </div>
         <div class="card__row">
             <div class="card__column">

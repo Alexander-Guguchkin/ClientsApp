@@ -9,6 +9,7 @@ class CardClients extends Component
     public $id;
     public $username;
     public $contact;
+    public $status;
     public $created;
     public $updated;
 
@@ -17,11 +18,12 @@ class CardClients extends Component
      *
      * @return void
      */
-    public function __construct($id, $username, $contact, $created, $updated)
+    public function __construct($id, $username, $contact, $status, $created, $updated)
     {
         $this->id = $id;
         $this->username = $username;
         $this->contact = $contact;
+        $this->status = $status;
         $this->created = $created;
         $this->updated = $updated;
     }
