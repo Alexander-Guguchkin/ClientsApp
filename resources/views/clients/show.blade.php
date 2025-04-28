@@ -21,6 +21,10 @@
             <div>{{ $client->contact }}</div>
         </div>
         <div class="info">
+            <div>Описание:</div>
+            <div>{{ $client->description }}</div>
+        </div>
+        <div class="info">
             <div>Время создания:</div>
             <div>{{ $client->created_at }}</div>
         </div>

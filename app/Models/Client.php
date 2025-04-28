@@ -9,7 +9,8 @@ class Client extends Model
 {
     protected $fillable = [
         'username',
-        'contact'
+        'contact',
+        'description'
     ];
 
     public function status()  {

@@ -24,6 +24,14 @@
                 <input type="text" name="contact">
             </div>
         </div>
+        <div>
+            <div>
+                Описание клиента
+            </div>
+            <div>
+                <textarea name="description" id="" cols="30" rows="5"></textarea>
+            </div>
+        </div>
         <x-button type="submit" text="Создать" />
     </form>
 @endsection

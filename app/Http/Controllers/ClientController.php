@@ -21,7 +21,8 @@ class ClientController extends Controller
     {
         $validated = $request->validate([
             'username' => 'string',
-            'contact' => 'string'
+            'contact' => 'string',
+            'description' => 'string'
         ]);
         Client::create($validated);
         return redirect()->route('clients.index');
@@ -36,7 +37,8 @@ class ClientController extends Controller
     {
         $validated = $request->validate([
             'username' => 'string',
-            'contact' => 'string'
+            'contact' => 'string',
+            'description' => 'string'
         ]);
 
         $clients->update($validated);

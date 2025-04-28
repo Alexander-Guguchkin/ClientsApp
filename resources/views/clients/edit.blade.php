@@ -21,6 +21,14 @@
             </div>
             <input type="text" name="contact" value="{{ $clients->contact ?? '' }}">
         </div>
+        <div>
+            <div>
+                Описание клиента
+            </div>
+            <div>
+                <textarea name="description" id="" cols="30" rows="5">{{$clients->description ?? ''}}</textarea>
+            </div>
+        </div>
         <x-button type="submit" text="Редактировать" />
     </form>
 @endsection
