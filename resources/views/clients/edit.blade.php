@@ -23,12 +23,28 @@
         </div>
         <div>
             <div>
+                Статус клиента
+            </div>
+            <div>
+                <select name="" id="">
+                    <option value="new">Новый</option>
+                    <option value="in_processing">В бработке</option>
+                    <option value="in_work">В работе</option>
+                    <option value="locked">Заблокирован</option>
+                    <option value="paused">Приостоновлен</option>
+                    <option value="archive">Архивный</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <div>
                 Описание клиента
             </div>
             <div>
                 <textarea name="description" id="" cols="30" rows="5">{{$clients->description ?? ''}}</textarea>
             </div>
         </div>
+
         <x-button type="submit" text="Редактировать" />
     </form>
 @endsection
