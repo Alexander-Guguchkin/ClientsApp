@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
@@ -12,3 +13,4 @@ Route::post('/clients', [ClientController::class, 'store'])->name('clients.store
 Route::get('/clients/edit/{clients}', [ClientController::class, 'edit'])->name('clients.edit');
 Route::patch('/clients/{clients}', [ClientController::class, 'update'])->name('clients.update');
 Route::delete('/clients/{clients}', [ClientController::class, 'destroy'])->name('clients.destroy');
+Route::resource('users', UserController::class);
