@@ -38,7 +38,8 @@ class ClientController extends Controller
         $validated = $request->validate([
             'username' => 'string',
             'contact' => 'string',
-            'description' => 'string'
+            'description' => 'string',
+            'status_id' => 'int'
         ]);
 
         $clients->update($validated);
