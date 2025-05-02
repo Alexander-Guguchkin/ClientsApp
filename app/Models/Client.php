@@ -10,7 +10,8 @@ class Client extends Model
     protected $fillable = [
         'username',
         'contact',
-        'description'
+        'description',
+        'status_id'
     ];
 
     public function status()  {

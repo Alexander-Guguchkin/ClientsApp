@@ -26,13 +26,13 @@
                 Статус клиента
             </div>
             <div>
-                <select name="" id="">
-                    <option value="new">Новый</option>
-                    <option value="in_processing">В бработке</option>
-                    <option value="in_work">В работе</option>
-                    <option value="locked">Заблокирован</option>
-                    <option value="paused">Приостоновлен</option>
-                    <option value="archive">Архивный</option>
+                <select name="status_id" id="status_id">
+                    <option value="1" @selected($clients->status_id == 1)>Новый</option>
+                    <option value="2" @selected($clients->status_id == 2)>В обработке</option>
+                    <option value="3" @selected($clients->status_id == 3)>В работе</option>
+                    <option value="4" @selected($clients->status_id == 4)>Заблокирован</option>
+                    <option value="5" @selected($clients->status_id == 5)>Приостоновлен</option>
+                    <option value="6" @selected($clients->status_id == 6)>Архивный</option>
                 </select>
             </div>
         </div>
