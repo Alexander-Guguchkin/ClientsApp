@@ -1,6 +1,8 @@
 <!-- resources/views/users/index.blade.php -->
 @extends('layouts.app')
 
+@section('title', 'Пользователи')
+
 @section('content')
 <div class="container">
     <h1 class="mb-4">Список пользователей</h1>
