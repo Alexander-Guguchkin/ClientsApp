@@ -49,10 +49,5 @@
                     <span class="ml-3">Пользователи</span>
                 </x-nav-item>
             </li>
-            <li>
-                <x-nav-item>
-                
-                </x-nav-item>
-            </li>
         </ul>
 </aside>
